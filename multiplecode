@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "What is your favorite Ninja Turtle?"
+
+echo "1- Create a folder in myfolder."
+echo "2- Create a fole in myfolder."
+
+echo  "Choose your choice: "
+read create;
+
+case $create in
+        1) mkdir /data/myfolder/testfolder;;
+        2) touch /data/myfolder/test.txt;;
+        *) echo "Did you create file or folder?";;
+esac 
+
+

@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "What do you do?"
+echo "1) Create a folder named testfolder in /data/BashScript/myfolder"
+echo "2) Create a file named test.txt in /data/BashScript/myfolder"
+
+echo "Choose your choice:"
+
+read create;
+
+case $create in 
+	1) 
+	mkdir /data/BashScript/myfolder/testfolder
+	;;
+	2) 
+	touch /data/BashScript/myfolder/test.txt
+	;;
+	*) echo "Your choice is not correct."
+esac

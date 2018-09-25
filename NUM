@@ -1,0 +1,9 @@
+#!/bin/bash
+echo -n "Type a number: "
+read NUM
+echo $NUM
+let NUM2=NUM+100
+echo "Increase the input value by 100"
+echo $NUM2
+echo "Increase the vale 5 times"
+expr $NUM2 \* 5

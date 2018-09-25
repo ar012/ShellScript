@@ -1,0 +1,479 @@
+#!/bin/bash
+echo "welcome to linux shell scritping..." 
+
+#!/bin/bash
+	## file name: arithmetic.sh 	topic: Arithmetic summation ##
+a=25
+b=5
+
+echo `expr $a + $b`
+echo `expr $a - $b`
+echo `expr $a \* $b`
+echo `expr $a / $b`
+echo `expr $a % 4`
+
+ 
+#!/bin/bash
+	## file name: arith.sh 	topic: Arithmetic summation ##
+echo 'Enter first integer number: '
+read n1
+echo 'Enter second integer number: '
+read n2
+echo 'Sum of two numbers: '`expr $n1 + $n2`
+
+echo 'Enter an integer number: '
+read n1
+echo 'Enter second integer number: '
+read n2
+sum=$((n1+n2))
+echo "The result of sum: $sum"
+
+sub=$((n1-n2))
+echo "The result of sub: $sub"
+
+mul=$((n1*n2))
+echo "The result of mul: $mul"
+
+div=$((n1/n2))
+echo "The result of div: $div"
+
+mod=$((n1%n2))
+echo "The result of mod: $mod"
+
+
+#!/bin/bash
+	## file name: array 	topic: array ##
+array=(1 2 3 4 5)
+echo ${array[2]}
+
+
+#!/bin/bash
+	## file name: arr.sh 	topic: array ##
+arr={1 2 3 4 5}
+ehco "Position value is: ${arr[1]}"
+
+#!/bin/bash
+	## file name: avr.sh 	topic: average  ##
+a=(5 10 15 20)
+#for i in {0..3}
+for ((i=1;i<=4;i++))
+do 
+#sum=$((sum+a[i]))
+sum=$((sum+i))
+done
+echo "$sum"
+avr=$((sum/4))
+echo "$avr"
+
+	
+#!/bin/bash
+	## file name: bashtrap.sh   topic: bash trap  ##
+trap bashtrap INT
+clear;
+
+bashtrap()
+{
+	echo "CTRL+C is Detected !............Executing the BAsH TRAP !!!.."
+}
+for a in `seq 1 10`; do
+    echo "$a/10  to exit."
+    sleep 1;
+done
+echo "Exit Bash Trap Example!!!!!!!!!!!!!!"
+
+
+#!/bin/bash
+	## file name: casestatement.sh 	topic: Case Statement ##
+echo "What is your favorite Ninja Turtle?"
+
+echo "1- Raphael."
+echo "2- Leonardo."
+echo "3- Michelangelo."
+echo "4- Donatello."
+
+echo  "Choose your choice: "
+read turtle;
+
+case $turtle in
+	1) echo "Raphael is cool, but rude."
+	#	code
+	#	code
+	;;
+	2) echo "leonardo leads.";;
+	3) echo "Michelangelo is a party dude";;
+	4) echo "Donatello does machines.";;
+	*) echo "Did you even watch this show?";;
+esac 
+
+#!/bin/bash
+	## file name: multiplecode   topic: case statement ##	
+echo "What is your favorite Ninja Turtle?"
+
+echo "1- Create a folder in myfolder."
+echo "2- Create a fole in myfolder."
+
+echo  "Choose your choice: "
+read create;
+
+case $create in
+        1) 
+	mkdir /data/myfolder/testfolder
+	;;
+        2) 
+	touch /data/myfolder/test.txt
+	;;
+        *) echo "Did you create file or folder?";;
+esac 
+
+
+#!/bin/bash
+	## file name: casestatement2 	topic: Case Statement ##
+echo "What do you do?"
+echo "1) Create a folder named testfolder in /data/BashScript/myfolder"
+echo "2) Create a file named test.txt in /data/BashScript/myfolder"
+
+echo "Choose your choice:"
+
+read create;
+
+case $create in 
+	1) 
+	mkdir /data/BashScript/myfolder/testfolder
+	;;
+	2) 
+	touch /data/BashScript/myfolder/test.txt
+	;;
+	*) echo "Your choice is not correct."
+esac
+
+
+
+good night
+ls: cannot open directory '/root': Permission denied
+lahalal: command not found
+
+
+#!/bin/bash
+	## file name: file_check.sh 	topic: file checking in a directory ##
+if [ -f /data/DevOps/BashScript/abc ]; then
+	echo "The file exits."
+else
+	echo "The file does not exit."
+fi
+
+
+#!/bin/bash
+	## file name: file-existence 	topic: file checking in a directory ##
+if [ -f /data/testdir/testfile.txt ]
+then
+	echo "The file exists."	
+	mv /data/testdir/testfile.txt /home/abdurrazzak/Documents/
+else 
+	echo "The file does not exist."
+fi
+
+
+#!/bin/bash
+	## file name: folder_check.sh 	topic: folder checking in a directory ##
+if [ -d ~/BASH/myfolder ]
+then
+	echo "myfolder exits."
+else
+	echo "myfolder does not exit."
+fi
+
+
+#!/bin/bash
+	## file name: folder-existence 	topic: folder existence in a directory ##
+if [ -d /data/testdir/dir1 ]
+then
+	echo "The folder exists."	
+	cp -r /data/testdir/dir1 /home/abdurrazzak/Documents/
+else 
+	echo "The folder does not exist."
+fi
+
+
+#!/bin/bash
+	## file name: forloop.sh  topic: forloop ##
+for i in {0..100..5}
+do 
+	echo "$i"
+done
+
+
+#!/bin/bash
+	## file name: grade.sh  topic: determine grading ##
+echo "Insert marks between 0 and 100"
+read num
+if [ $num -ge 80 ]
+	then echo "Result = A+"
+	elif [ $mum -ge 70 ]
+	then echo "Result = A"
+	elif [ $num -ge 60 ]
+	then echo "Result = A-"
+	elif [ $num -ge 50 ]
+	then echo "Result = B"
+	elif [ $num -ge 40 ]
+	then echo "Result = C"
+	else
+	echo "Result = F"
+fi
+
+
+#!/bin/bash
+	## file name: hello.sh	topic: first script progra ##
+echo "Hello World!!!"
+
+
+#!/bin/bash
+	## file name: helloworld2   topic: variable ##
+HELLO="Hello World"
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo 'hello michigan'
+echo 'hello michigan'
+echo 'hello michigan'
+echo 'hello michigan'
+echo 'hello michigan'
+echo 'hello michigan'
+
+
+
+#!/bin/bash
+	## file name: hello-world.sh   topic: declare STRING variable ##
+STRING="Hello World"
+# print variable on screen
+echo $STRING
+
+
+#!/bin/bash
+	## file name: ifelse.sh   topic: if else statement ##
+echo "Enter the first number:"
+read n1
+echo "Enter the second number:"
+read n2
+if [ $n1 == $n2 ] 
+then
+	echo "Two numbers are equal"
+else
+	echo "Two numbers are not equal"
+fi
+
+
+
+#!/bin/bash
+	## file name: ifstatement   topic: if else statement ##
+#echo -n "INPUT a number: "
+#read MYNUM
+MYNUM=200
+if [ $MYNUM -eq 200 ]; then
+	echo "MYNUM is equal to 200"
+else
+	echo "MYNUM is not equal to 200"
+fi
+
+
+#!/bin/bash
+	## file name: input2.sh   topic: input function ##
+echo "Write your name:"
+read name
+echo "Name: $name"
+
+read -p "Your moble No: " mobile
+echo "your phone no is: $mobile"
+
+
+#!/bin/bash
+	## file name: input.sh   topic: input function ##
+read -p "Enter first name: " firstname
+read -p "Enter last name: " lastname
+echo "Full name: $firstname $lastname"
+
+
+#!/bin/bash
+	## file name: loopsum.sh   topic: sum with for loop ##
+for i in {1..10}
+do
+	sum=$((sum+i))
+done
+echo "Summation=$sum"
+
+
+
+for ((j=1;j<=100;j++))
+do 
+	sum2=$((sum2+j))
+done
+
+
+#!/bin/bash
+	## file name: NUM   topic:  value increasing  ##
+echo -n "Type a number: "
+read NUM
+echo $NUM
+let NUM2=NUM+100
+echo "Increase the input value by 100"
+echo $NUM2
+echo "Increase the value by 5 times"
+expr $NUM2 \* 5
+
+
+
+#!/bin/bash
+	## file name: powertest   topic:  plugin testing  ##
+grep -q clossed /proc/acpi/button/lid/LID0/state 
+if [ $? = 0 ]
+then
+	## The laptop lid is clossed, Let's find out if it's plugged in.
+	grep -q 0 /sys/class/power_supply/AC/online
+	if [ $? = 0 ]
+	then
+		## The laptop is not plugged in. It should be asleep.
+		pm-suspend
+	fi
+fi
+
+
+#!/bin/bash
+	## file name: prime.sh   topic: test a number which is prime?  ##
+echo -n "Enter an integer number: "
+read n1
+i=2
+while [ $i -lt $n1 ]
+do 
+
+
+#if [ `expr $n1 % $i` -eq 0 ]
+if [ $((n1 % i)) -eq 0 ]
+then echo "$n1 is not a prime number"
+exit
+fi
+#i=`expr $i + 1`
+i=$((i+1))
+done
+
+
+#!/bin/bash
+	## file name: read.sh   topic: input by read  ##
+echo "$n1 is a prime number"
+echo "Enter your first name:"
+read firstname
+echo "Enter your last name:"
+read lastname
+echo "firstname: $firstname and lastname: $lastname"
+echo "fullname: $firstname $lastname"
+
+
+#!/bin/bash
+	## file name: standardinput.sh   topic: standardinput by read  ##
+echo "Please enter your name:"
+read myname
+echo "You entered: $myname"
+
+
+#!/bin/bash
+	## file name: sum.sh   topic: sum of arithmetic series  ##
+echo "Enter the last number:"
+read n
+echo "Sum of Arithmetic Series upto $n:"
+for ((i=1;i<=n;i++))
+do echo "$i"
+if [ $i == $n ]
+then echo "Summation"
+else
+  echo "+"
+fi
+sum=$((sum+i))
+done
+echo "$sum"
+
+
+#!/bin/bash
+	## file name: updatescript.sh   topic: system update  ##
+
+## Test if the local host is Arch-based
+if [ -d /etc/pacman.d ]
+then
+	## Run the Arch version of the update command
+	sudo pacman -Syu
+fi
+
+## Test if the local host is Debian-based
+if [ -d /etc/apt ]
+then
+	## Run the Debian version of the update command
+	sudo apt-get update -y
+fi
+
+
+#!/bin/bash 
+	## file name: userinput.sh   topic: taking input from user  ##
+echo -n "Type your fist name: "
+read name1
+echo -e "Please type your last name: \c"
+read name2
+echo "Your name is: $name1 $name2"
+
+echo -e "Can you please enter two words?"
+read word1 word2 
+echo "Your words: \"$word1\" \"$word2\""
+
+echo -e "How do you feel about Programming in general?"
+read 
+echo "You said $REPLY, Awesome!"
+
+
+#!/bin/bash
+	## file name: 	topic: local and global variable
+VAR="global variable"
+function bash {
+	local VAR="local variable"
+	echo $VAR
+}
+echo $VAR
+echo "variable2"
+bash
+echo $VAR
+
+
+#!/bin/bash
+	## file name: variable.sh 	topic: variable
+STRING="HELLO"
+STRING1="HI"
+echo $STRING
+echo $STRING1
+
+
+#!/bin/bash
+	## file name: while  	topic: while loop
+myvar=1
+while [ $myvar -le 10 ]
+do 
+	echo $myvar
+	myvar=$(( $myvar + 1 ))
+	sleep 0.5
+done
+
+
+
+#!/bin/bash
+	## file name: whilesum.sh  topic: while loop and sum
+echo "Enter a number"
+read num
+var=1
+sum=0
+while [ $var -le $num ]
+do 
+	sum=$(( $sum + $var ))
+	var=$(( $var + 1 ))
+done
+echo "Summation from 1 to $num = $sum"

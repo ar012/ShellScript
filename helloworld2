@@ -1,0 +1,19 @@
+#!/bin/bash
+HELLO="Hello World"
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo $HELLO
+echo 'hello michigan'
+echo 'hello michigan'
+echo 'hello michigan'
+echo 'hello michigan'
+echo 'hello michigan'
+echo 'hello michigan'
+
