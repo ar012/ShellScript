@@ -464,6 +464,7 @@ do
 done
 
 
+#summation
 
 #!/bin/bash
 	## file name: whilesum.sh  topic: while loop and sum

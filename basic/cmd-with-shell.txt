@@ -1,0 +1,40 @@
+Syntax:
+test EXPRESSION
+[ EXPRESSION ]
+
+      [ condition-to-test-for ]
+
+example: 
+        [ -e /etc/password ]
+
+File Operators (tests):
+=======================
+-d File -> True if file is a directory
+-e File -> True if file exists
+-f File -> True if file exists and is a regular file
+-r File -> True if file is readable by you
+-s File -> True if file exists and is not empty
+-w File -> True if the file is writable by you
+-x File -> True if the file is executable by you
+
+
+Sring Operators (tests):
+=======================
+-z String -> True if string is empty
+-n String -> True if string in not empty
+String1 = String2 -> True if the strings are equal
+String ! = String2 -> True if the strings are not equal 
+
+Arithmetic Operators (tests):
+=============================
+arg1 -eq arg2 -> True if arg1 is equal to arg2
+arg1 -ne arg2 -> True if arg1 is notequal to arg2
+
+arg1 -lt arg2 -> True if arg1 is less than arg2
+arg1 -le arg2 -> True if arg1 is less than or equal to arg2
+
+arg1 -gt arg2 -> True if arg1 is greater than arg2
+arg1 -ge arg2 -> True if arg1 is greater than or equal to arg2
+
+*****
+est 100 -gt 99 && echo "Yes, that's true." || echo "No, that's false."

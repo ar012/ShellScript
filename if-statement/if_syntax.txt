@@ -1,0 +1,30 @@
+fi [ condition-is-true ]
+then 
+  command1
+  command2
+  command3
+fi
+
+
+
+if/else statement:
+=================
+if [ condition-is-true ]
+then
+    command1
+else 
+    command2
+fi
+
+
+if/elif/else statement:
+======================
+if [ condition-is-true ]
+then
+    command1
+elif [ condition-s-true ]
+then
+    command2
+else 
+    command3
+fi
